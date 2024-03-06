@@ -61,7 +61,7 @@ class _CoachingDetailsWidgetState extends ConsumerState<CoachingDetailsWidget> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 3),
                   decoration: BoxDecoration(
                     color: Constants.positiveRatingColor,
                     borderRadius: BorderRadius.circular(

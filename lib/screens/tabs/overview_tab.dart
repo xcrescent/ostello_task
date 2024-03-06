@@ -26,6 +26,7 @@ class _OverviewTabState extends State<OverviewTab> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             'Categories',

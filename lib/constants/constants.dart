@@ -3,7 +3,7 @@ import 'dart:ui';
 class Images{
   static const String basePath = "assets/images/";
   static const  coachingImage = "${basePath}coaching_image.png";
-
+  static const verifiedTag = '${basePath}verified.png';
 }
 
 class SvgImages{

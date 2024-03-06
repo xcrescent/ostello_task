@@ -1,14 +1,11 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ostello_task/constants/constants.dart';
 import 'package:ostello_task/screens/tabs/overview_tab.dart';
 import 'package:ostello_task/widgets/coaching_details_widget.dart';
-
-// import 'package:scroll_navigation/misc/navigation_helpers.dart';
-// import 'package:scroll_navigation/navigation/scroll_navigation.dart';
+import 'package:ostello_task/widgets/verified_tag.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -34,10 +31,19 @@ class _HomePageState extends ConsumerState<HomePage> {
                     Images.coachingImage,
                     fit: BoxFit.cover,
                   ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Align(
+                      widthFactor: 1,
+                      alignment: Alignment.topLeft,
+                      child: VerifiedTag(),
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 18)
-                        .copyWith(top: MediaQuery.of(context).size.height * 0.2),
+                        .copyWith(
+                            top: MediaQuery.of(context).size.height * 0.2),
                     child: const Align(
                       alignment: Alignment.bottomCenter,
                       child: CoachingDetailsWidget(
